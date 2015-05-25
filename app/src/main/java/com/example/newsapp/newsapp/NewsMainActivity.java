@@ -3,14 +3,15 @@ package com.example.newsapp.newsapp;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
+
+import static com.example.newsapp.newsapp.R.layout.activity_el_dia;
 
 public class NewsMainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,12 +56,19 @@ public class NewsMainActivity extends Activity {
         setContentView(R.layout.activity_news_main);
     }
 
+    /** Called when the user clicks the ElDia  button */
     public void gotoElDia(View view) {
-
-        // Do something in response to button
-        setContentView(R.layout.activity_el_dia);
-
-
+       setContentView(activity_el_dia);
+        try {
+            Intent startIntent = new Intent(this, ElDiaActivity.class);
+            startIntent.putExtra("layout", R.layout.activity_el_dia);
+            //Intent startIntent = new Intent(NewsMainActivity.this, ElDiaActivity.class);
+            /*Intent startIntent;
+            startIntent = new Intent(ElDiaActivity.class);*/
+            startActivity(startIntent);
+        } catch ( Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
