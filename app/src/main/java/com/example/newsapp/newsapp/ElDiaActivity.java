@@ -155,8 +155,7 @@ public class ElDiaActivity extends Activity{
      * */
     private void setData(LinkedList<HashMap<String, String>> data){
         SimpleAdapter sAdapter = new SimpleAdapter(getApplicationContext(), data,
-                android.R.layout.lin
-                        two_line_list_item,
+                android.R.layout.two_line_list_item,
                 new String[] { DATA_TITLE, DATA_LINK },
                 new int[] { android.R.id.text1, android.R.id.text2 });
         ListView lv = (ListView) findViewById(R.id.listData);
