@@ -10,7 +10,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name=".myAppData">
+
         <activity
             android:name="com.example.newsapp.newsapp.SplashScreenActivity"
             android:label="@string/title_activity_splash_screen" >
@@ -27,11 +29,12 @@
             android:name="com.example.newsapp.newsapp.ElDiaActivity"
             android:label="@string/el_dia_name" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ShowFeedElement"></activity>
     </application>
 
 </manifest>
